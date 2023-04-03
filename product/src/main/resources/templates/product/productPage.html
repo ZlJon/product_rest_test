@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품관리 페이지</title>
+    <style>
+      * {
+        text-decoration: none;
+        color: black;
+      }
+      p {
+        margin: 0;
+      }
+      .listWrapper div {
+        display: flex;
+        column-gap: 30px;
+      }
+      .table {
+        display: flex;
+        flex-direction: column;
+      }
+      .head {
+        display: grid;
+        grid-template-columns: 50px 100px 50px 100px;
+        grid-template-rows: auto;
+      }
+      .body {
+        display: flex;
+        flex-wrap: wrap;
+        width: 250px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="addWrapper">
+      <h2>상품등록</h2>
+      <button type="button">
+        <a href="" th:href="@{/}">메인페이지</a>
+      </button>
+      <hr />
+      <form action="">
+        <div>
+          <input type="text" name="" id="pid" readonly />
+          <label for="">상품ID</label>
+        </div>
+        <div>
+          <input type="text" name="" id="pname" /> <label for="">상품명</label>
+        </div>
+        <div>
+          <input type="text" name="" id="quantity" />
+          <label for="">상품수량</label>
+        </div>
+        <div>
+          <input type="text" name="" id="price" />
+          <label for="">상품가격</label>
+        </div>
+        <div>
+          <button class="setBtn">등록</button
+          ><!-- 목록으로 -->
+        </div>
+      </form>
+    </div>
+    <div class="inquiryWrapper">
+      <h2>상품조회</h2>
+      <button type="button">
+        <a href="" th:href="@{/}">메인페이지</a>
+      </button>
+      <hr />
+      <form action="">
+        <div>
+          <input type="text" name="" id="pid" />
+          <label for="">상품ID</label>
+        </div>
+        <div>
+          <input type="text" name="" id="pname" />
+          <label for="">상품명</label>
+        </div>
+        <div>
+          <input type="text" name="" id="quantity" />
+          <label for="">상품수량</label>
+        </div>
+        <div>
+          <input type="text" name="" id="price" />
+          <label for="">상품가격</label>
+        </div>
+        <div>
+          <button class="updateBtn" type="button">수정</button
+          ><!-- 수정으로 -->
+          <button class="deleteBtn" type="button">삭제</button>
+          <button class="listBtn" type="button">목록</button>
+        </div>
+      </form>
+    </div>
+    <div class="updateWrapper">
+      <h2>상품수정</h2>
+      <button type="button">
+        <a href="" th:href="@{/}">메인페이지</a>
+      </button>
+      <hr />
+      <form action="">
+        <div>
+          <input type="text" name="" id="pid" />
+          <label for="">상품ID</label>
+        </div>
+        <div>
+          <input type="text" name="" id="pname" /> <label for="">상품명</label>
+        </div>
+        <div>
+          <input type="text" name="" id="quantity" />
+          <label for="">상품수량</label>
+        </div>
+        <div>
+          <input type="text" name="" id="price" />
+          <label for="">상품가격</label>
+        </div>
+        <div>
+          <button class="updateBtn" type="button">수정</button
+          ><!-- 목록으로 -->
+          <button class="listBtn" type="button">취소</button
+          ><!-- 목록으로 -->
+        </div>
+      </form>
+    </div>
+    <div class="listWrapper">
+      <h2>상품목록</h2>
+      <button type="button">
+        <a href="" th:href="@{/}">메인페이지</a>
+      </button>
+      <hr />
+      <div class="table">
+        <div class="head">
+          <div>상품ID</div>
+          <div>상품명</div>
+          <div>상품수량</div>
+          <div>상품가격</div>
+        </div>
+        <p>--------------------------------------------------</p>
+        <div class="body"><!-- 데이터 들어오는 곳 --></div>
+      </div>
+      <hr />
+      <button class="addBtn" type="button">신규 등록</button
+      ><!-- 등록으로 -->
+    </div>
+    <script src="" type="module" th:src="@{/js/app.js}"></script>
+    <script src="" type="module" th:src="@{/js/ajax.js}"></script>
+  </body>
+</html>
